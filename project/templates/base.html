@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/project.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LIKELION 13th Django Session</title>
+    <style>
+      a {
+        text-decoration: none;
+      }
+      .body-container {
+        background-color: CornflowerBlue;
+        color: #fff;
+        margin: 20px;
+      }
+      .navbar-container {
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        gap: 40px;
+        background-color: Coral;
+        font-size: 18px;
+      }
+      .navbar-link {
+        color: #5c3900;
+        font-size: 30px;
+      }
+      .navbar-link:hover {
+        color: #111;
+      }
+      .contents_1 {
+        font-size: 50px;
+        margin: 20px;
+      }
+      .contents_2 {
+        font-size: 35px;
+        margin: 20px;
+      }
+      li {
+        margin-bottom: 20px;
+        font-size: 20px;
+      }
+      .contents_3 {
+        font-size: 27px;
+        margin: 20px;
+        color: LightSalmon
+      }
+    </style>
+  </head>
+  <body>
+    {% include 'shared/_navbar.html' %}
+    {% block content %}
+
+    {% endblock %}
+  </body>
+</html>

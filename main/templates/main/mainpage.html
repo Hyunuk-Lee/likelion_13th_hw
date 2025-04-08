@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<h1 class="contents_1">멋쟁이사자처럼 {{session_num}}주차 과제</h1>
+<div class="contents_2">2주차 세션에서 배운 내용 정리하기</div>
+<div class="contents_3">Template 및 Template 언어</div>
+<ol>
+  <li>가상환경 키는 명령어 : pipenv shell</li>
+  <li>
+    project : 사이트 전체를 의미 ex) 인스타그램 <br>
+    app : 프로젝트를 구성하는 기능의 집합 단위 ex) 회원정보, 게시글 등등
+  </li>
+  <li>gitignore를 하는 이유 -> db, media 같은 깃에서 충돌이 일어날 수 있는 파일들을 충돌이 일어나지 않게 해줌</li>
+  <li>Templates 폴더 생성 이유 : <br>유저에게 제공할 파일의 구조나 레이아웃을 한 데 모아 관리하기 위해</li>
+  <li>view --> 원하는 url을 통해 작성한 페이지가 보여지게 함</li>
+  <li>url --> url에 해당하는 데이터 연결</li>
+  <li>Template 언어 : view에 작성된 data 가져오기, 반복문 등 기능 수행<br>
+    파이썬의 변수, 문법을 html에서 사용할 수 있도록 제공하는 직관적인 언어.<br>
+    (기타 파이썬의 속성 사용 가능 : 반복문, 조건문, 배열 등)</li>
+</ol>
+<div class="contents_3">효율적인 코드</div>
+<ol>
+  <li>반복되는 코드 : base.html 로 통합</li>
+  <li>block, block content, endblock 등의 코드 사용</li>
+  <li>template 상속 :<br>
+    os를 import하고 템플릿 파일을 찾을 수 있는 경로 추가</li>
+  <li>_navbar.html (언더바는 개발자들간의 소통을 위한 관례):<br>
+  --> 코드의 반복을 줄임
+  </li>
+</ol>
+<div class="contents_3">static</div>
+<ol>
+  <li>
+    static : 웹페이지에서 사용되는 정적인 파일을 저장하는 디렉토리<br>
+    ex) CSS & image
+  </li>
+  <li>css 와 image를 활용하기 위해 html 코드에서 경로 설정</li>
+</ol>
+
+
+{% endblock %}
